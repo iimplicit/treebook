@@ -7,8 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+	<div class="navbar navbar-fixed-top navbar-inverse">
+	  <div class="navbar-inner">
+	    <a class="brand" href="#">Hayyim Community</a>
+	    <ul class="nav">
+	      <li><a href="#">2014 여름캠프</a></li>
+	      <li><a href="#">하임소식</a></li>
+	      <li><%= link_to "방명록", statuses_path %></li>
+	    </ul>
+	  </div>
+	</div>
+	<div class="container">
+		<%= yield %>
+	</div>
 
 </body>
 </html>
