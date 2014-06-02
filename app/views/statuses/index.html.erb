@@ -2,7 +2,9 @@
   <h1> All of the Statuses </h1>
 </div>
 
-<%= @statuses.each do |status| %>
+<%= link_to "새 글 작성하기", new_status_path, class: "btn btn-success" %>
+
+<% @statuses.each do |status| %>
 <div class="status">
   <strong><%= status.name %></strong>
   <p><%= status.content %></p>
@@ -10,8 +12,8 @@
     <%= link_to time_ago_in_words(status.created_at) + " ago", status %>
     <span class="admin">
       | <%= link_to "Edit", edit_status_path(status) %> |
-      <%= link_to "Delete", status, method: :delete, data: { confirm: "정말 삭제하시겟습니까?"} 
+      <%= link_to "Delete", status, method: :delete, data: { confirm: "정말 삭제하시겠습니까?"} %>
+    </span>
   </div>
-
-
+</div>
 <% end %>

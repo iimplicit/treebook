@@ -10,3 +10,23 @@
 .status p {
 	margin: 4px 0;
 }
+
+.status .admin {
+	display: none;
+}
+
+.status.hover .admin {
+	display: inline;
+}
+
+.status.hover {
+	background: #F0FAFA;
+}
+
+.page-header{
+	margin-bottom: 10px;
+}
+
+.btn {
+	margin-bottom: 20px;
+}
